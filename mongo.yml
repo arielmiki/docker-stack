@@ -9,7 +9,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
     volumes:
-      - ~/.docker-data/mongodb/data/db
+      - ~/.docker-data/mongodb/data/db:/data/db
     ports:
       - 27017:27017
   
