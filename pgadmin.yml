@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongo:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - 127.0.0.1:1234:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    volumes:
+      - ~/pgadmin/servers.json:/servers.json
+      - ~/pgadmin/var/lib/pgadmin:/var/lib/pgadmin
+    networks:
+      - local
+networks:
+  local:
